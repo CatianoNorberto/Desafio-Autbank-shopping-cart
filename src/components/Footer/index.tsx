@@ -16,19 +16,19 @@ export const Footer = () => {
       <FooterContent className="container">
         <FooterRight>
           <h3>A Books</h3>
-          <Link to="/about">Sobre</Link>
+          <Link to="#">Sobre</Link>
         </FooterRight>
         <FooterBoxs>
           <Boxs>
             <FooterBoxContent>
               <h3>Products</h3>
-              <Link to="/projects">Disponíveis</Link>
+              <Link to="#">Disponíveis</Link>
             </FooterBoxContent>
             <FooterBoxContent>
               <h3>Mídia</h3>
               <Link
                 to={{
-                  pathname: "https://blog.Books.com.br/",
+                  // pathname: "#",
                 }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -37,7 +37,7 @@ export const Footer = () => {
               </Link>
               <Link
                 to={{
-                  pathname: "https://blog.Books.com.br/",
+                  // pathname: "#",
                 }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,20 +49,20 @@ export const Footer = () => {
           <Boxs>
             <FooterBoxContent>
               <h3>Parceiros</h3>
-              <Link to="/partners">Parceiros</Link>
-              <Link to="/partners">Seja um parceiro</Link>
+              <Link to="#">Parceiros</Link>
+              <Link to="#">Seja um parceiro</Link>
             </FooterBoxContent>
             <FooterBoxContent>
               <h3>Contato</h3>
-              <Link to="/contact">contato@Books.com.br</Link>
+              <Link to="#">contato@Books.com.br</Link>
               <Link
                 to={{
-                  // pathname: "https://api.whatsapp.com/send/?phone=5511945629199",
+                  // pathname: "#",
                 }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                (+55) 11 94562-9199
+                (+55) 11 912457937
               </Link>
             </FooterBoxContent>
           </Boxs>
