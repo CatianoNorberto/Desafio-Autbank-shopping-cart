@@ -57,26 +57,23 @@ export const CartProvider = ({ children }: Props) => {
     setDiscount(tot - total)
   }, [products, total]);
 
+  //função para adicionar os produtos
   function addCart(data: Book) {
     setProducts([...products, data]);
   }
 
+  //função que permite que o produto seja chamado uma unica vez
   function productAlreadyAdded(id: string) {
     return products.some((book) => book.id === id);
   }
 
+  //função para remover o produto 
   function removeProduct(id: string) {
     const filteredProducts = products.filter((book) => book.id !== id);
     setProducts(filteredProducts);
   }
 
-  // function removeAllProducts() {
-  //   const filteredAllPrducts = products.find((book) => book);
-  //   setProducts(filteredAllPrducts);
-  // }
-
   function handleIncrease(id: string) {
-    // refazer esse method
     const productUpdated = products.map((book) => {
       if (book.id === id) {
         return { ...book, quantity: book.quantity + 1 };
