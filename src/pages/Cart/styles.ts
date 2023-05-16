@@ -158,7 +158,8 @@ export const CartQuantity = styled.div`
   padding: 0px 8px;
   align-items: center;
   opacity: 1;
-
+  margin-left: 30px;
+  
   button{
     width: 100%;
     border: none;

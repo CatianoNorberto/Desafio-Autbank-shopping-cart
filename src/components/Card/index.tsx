@@ -36,7 +36,7 @@ export const Card = ({ image, name, price, ator, id }: Props) => {
           <p>{ator}</p>
           <div>
             <button
-            // style={productAlreadyAdded(id) ? {opacity: 0.1}: {}}
+              style={productAlreadyAdded(id) ? { opacity: 0.1 } : {}}
               disabled={productAlreadyAdded(id)}
               onClick={() =>
                 addCart({
@@ -45,11 +45,15 @@ export const Card = ({ image, name, price, ator, id }: Props) => {
                   name: name,
                   price: price,
                   image: image,
-                  quantity: 1
+                  quantity: 1,
                 })
               }
             >
-              Add no Cart
+              {productAlreadyAdded(id) ? (
+                <span>No carrinho</span>
+              ) : (
+                <span>Add No carrinho</span>
+              )}
             </button>
           </div>
         </Description>

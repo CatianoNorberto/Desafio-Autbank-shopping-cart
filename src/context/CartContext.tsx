@@ -70,6 +70,11 @@ export const CartProvider = ({ children }: Props) => {
     setProducts(filteredProducts);
   }
 
+  // function removeAllProducts() {
+  //   const filteredAllPrducts = products.find((book) => book);
+  //   setProducts(filteredAllPrducts);
+  // }
+
   function handleIncrease(id: string) {
     // refazer esse method
     const productUpdated = products.map((book) => {
