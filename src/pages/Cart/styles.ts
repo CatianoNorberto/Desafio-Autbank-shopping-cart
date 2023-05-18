@@ -301,3 +301,25 @@ export const LinksContainer = styled.div`
     }
   }
 `
+export const ModalContainer = styled.div`
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  strong{
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  svg {
+    margin-bottom: 20px;
+  }
+`

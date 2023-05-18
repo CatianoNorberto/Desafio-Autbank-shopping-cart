@@ -1,12 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { FaReply } from "react-icons/fa";
+import { FaReply, FaCheckCircle } from "react-icons/fa";
 import { AiOutlineDelete, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 import CartContext from "../../context/CartContext";
 
 import { Header } from "../../components/Header";
+import { NewModal } from "../../components/NewModal";
 
 import {
   Container,
@@ -24,14 +25,21 @@ import {
   CartQtPrice,
   CartTotal,
   LinksContainer,
+  ModalContainer
 } from "./styles";
 
 export const Cart = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false)
+  
+  const toggleModal = () => {
+    setIsOpenModal(!isOpenModal)
+  }
   const navigate = useNavigate();
 
   const handleGoToHome = () => {
     navigate("/");
   };
+
 
   const {
     products,
@@ -44,6 +52,20 @@ export const Cart = () => {
 
   return (
     <Container>
+      <NewModal 
+        isOpen={isOpenModal}
+        onClose={toggleModal}
+      >
+        <ModalContainer>
+          <FaCheckCircle size={100} color="#28A745" />
+          <strong>Seu pedido foi confirmado com sucesso!</strong>
+          <p>
+            Enviamos um email de confirmação de conta, por favor confirme
+            seu email para acompanhar o seu pedido na plataforma.
+          </p>
+        </ModalContainer>
+      </NewModal>
+
       <Header />
       <Contents>
         <CartSection>
@@ -105,7 +127,7 @@ export const Cart = () => {
             <span>R$ {total.toFixed(2)}</span>
           </CartTotal>
           <p>Recebeu desconto de R$ {discount.toFixed(2)}</p>
-          <button onClick={() => alert("pedido confirmado com sucesso")}>
+          <button onClick={toggleModal}>
             Confirmar
           </button>
           <LinksContainer>
