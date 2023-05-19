@@ -58,7 +58,7 @@ export const Cart = () => {
       >
         <ModalContainer>
           <FaCheckCircle size={100} color="#28A745" />
-          <strong>Seu pedido foi confirmado com sucesso!</strong>
+          <strong>Seu pedido foi confirmado com sucesso</strong>
           <p>
             Enviamos um email de confirmação de conta, por favor confirme
             seu email para acompanhar o seu pedido na plataforma.
