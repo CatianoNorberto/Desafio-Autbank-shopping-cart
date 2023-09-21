@@ -70,6 +70,7 @@ export const CardeImage = styled.div`
     align-items: center;
     justify-content: center;
     object-fit: contain;
+    aspect-ratio: 1/1;
   }
 `
 

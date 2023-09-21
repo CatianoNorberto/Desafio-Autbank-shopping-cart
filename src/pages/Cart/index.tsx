@@ -85,7 +85,7 @@ export const Cart = () => {
               <CartItems>
                 <Cartimg>
                   <a href="">
-                    <img src={product.image} alt="" />
+                    <img loading="lazy" src={product.image} alt="" />
                   </a>
                   <CartDescription>
                     <a href="">

@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
-import Modal from "react-modal";
+import { ReactNode } from "react"
+import Modal from "react-modal"
 
-import closeImg from "../../assets/images/close.svg";
+import closeImg from "../../assets/images/close.svg"
 
 interface Props {
   isOpen: boolean;

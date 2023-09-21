@@ -25,7 +25,7 @@ export const Card = ({ image, name, price, ator, id }: Props) => {
       <div>
         <ImageInfo>
           <CardeImage>
-            <img src={image} alt="" />
+            <img loading="lazy" src={image} alt="" />
           </CardeImage>
         </ImageInfo>
         <Description>
